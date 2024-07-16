@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="flex justify-between p-5">
+        <div class="font-bold text-3xl">
+            <h1>Nostra</h1>
+        </div>
+        <div class="flex gap-10 cursor-pointer font-bold">
+            <a class="hover:underline" href="index.html">HOME</a>
+            <a class="hover:underline" href="">NEW ARRIVALS</a>
+            <a class="hover:underline" href="">MOST WANTED</a>
+            <a class="hover:underline" href="">COLLECTION</a>
+            <a class="hover:underline" href="contact.html">CONTACT US</a>
+        </div>
+    </div>
+
+    <div class="main flex">
+        <div class="left-section">
+            <!-- Occasion -->
+            <div class="occasion p-5 text-3xl">
+                <h2 class="font-bold">Occasion</h2>
+                <div class="mt-5">
+                    <div><input type="checkbox" name="check" value="summer"> Summer</div>
+                    <div><input type="checkbox" name="check" value="party"> Party</div>
+                    <div><input type="checkbox" name="check" value="beach"> Beach</div>
+                </div>
+            </div>
+            <h1 id="result"></h1>
+
+            <!-- Color -->
+            <div class="color p-5 text-3xl">
+                <h2 class="font-bold text-2xl">Color</h2>
+                <div class="mt-5">
+                    <div><input type="checkbox" name="check" value="Red"> Red</div>
+                    <div><input type="checkbox" name="check" value="Blue"> Blue</div>
+                    <div><input type="checkbox" name="check" value="White"> White</div>
+                    <div><input type="checkbox" name="check" value="Green"> Green</div>
+                </div>
+            </div>
+            <h1 id="result"></h1>
+
+            <!-- Arrivals -->
+            <div class="p-5 text-3xl">
+                <h2 class="font-bold">Arrivals</h2>
+                <div class="mt-5">
+                    <div><input type="checkbox" name="check" value="New"> New</div>
+                    <div><input type="checkbox" name="check" value="old"> Old</div>
+                </div>
+            </div>
+            <h1 id="result"></h1>
+        </div>
+
+        <div class="right-section p-5">
+            <div class="search">
+                <input id="search" type="text" placeholder="search">
+                <i class="fa-solid fa-magnifying-glass" style="color: black;"></i>
+            </div>
+            <div id="product-container" class="images">
+                <div><img src="./image/c1.jpg" alt=""><h1>Floral Summer Shirt</h1><p>₹220</p></div>
+                <div><img src="./image/c2.jpg" alt=""><h1>Summer Green</h1><p>₹260</p></div>
+                <div><img src="./image/c3.jpg" alt=""><h1>Party Floral Shirt</h1><p>₹399</p></div>
+                <div><img src="./image/c4.jpg" alt=""><h1>Floral Summer Shirt</h1><p>₹399</p></div>
+                <div><img src="./image/c5.jpg" alt=""><h1>Beach Shirt</h1><p>₹388</p></div>
+                <div><img src="./image/c6.jpg" alt=""><h1>Shirty Party Red</h1><p>₹388</p></div>
+                <div><img src="./image/c7.jpg" alt=""><h1>Party Floral Shirt</h1><p>₹388</p></div>
+                <div><img src="./image/c8.jpg" alt=""><h1>Shirt Party Red</h1><p>₹388</p></div>
+                <div><img src="./image/c9.jpg" alt=""><h1>Floral Summer Shirt</h1><p>₹388</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join our newsletter -->
+    <div class="join">
+        <h2>Join our News Letter</h2>
+        <p style="text-align: center;">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <div style="margin-top: 10px;"><input class="input"></div>
+        <div><button>Subscribe <i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <div class="footer-1">
+            <h2 class="text-5xl font-bold">Nostra</h2>
+        </div>
+        <p class="footer-2 font-bold text-3xl">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested</p>
+        <div class="footer-3 flex text-white text-3xl">
+            <p><i class="fa-brands fa-x-twitter"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+            <p><i class="fa-brands fa-square-facebook"></i></p>
+            <p><i class="fa-regular fa-envelope"></i></p>
+        </div>
+        <div class="footer-4">
+            <p class="text-2xl font-bold">@ 2024 Nostra</p>
+        </div>
+    </div>
+
+    <script src="dummy.js"></script>
+</body>
+</html>
