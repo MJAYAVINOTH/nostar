@@ -23,7 +23,7 @@ btns.forEach((button)=>{
           if(index<0){
             index = imageList.length-1;
           }
-          container.style.background = `url("/image/${imageList[index]}.jpeg") center/cover no-repeat`;
+          container.style.background = `url("./image/${imageList[index]}.jpeg") center/cover no-repeat`;
        
 
 
