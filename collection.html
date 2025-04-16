@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CollectionOne</title>
+    <!--tailwind css cdn link-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!--stylecss-->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--header-section-->
+    <div class="flex justify-between items-center p-3 text-3xl text-black">
+      <div>
+        <h1 class="font-extrabold">Nostra</h1>
+      </div>
+
+      
+     <!--menu-icon-->
+      <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+
+      <div class="flex gap-5  hidden md:flex cursor-pointer ">
+        <a  class="cursor-pointer hover:underline" href="index.html">Home</a>
+        <a class="cursor-pointer hover:underline" href="collection.html">collection</a>
+        <a class="cursor-pointer hover:underline" href="contact.html"  >Contact</a>
+      </div>
+    </div>
+
+
+         <!--side-navbar-->
+         <section id="sidenav" class="bg-black text-white fixed z-20 top-0 " style="width: 50%; height: 100vh; right: -50%;">
+          <div class="text-right p-5">
+            <p id="closenav" class="cursor-pointer">x</p>
+          </div>
+          <div class="flex flex-col gap-10  items-center   ">
+            <a class="cursor-pointer hover:underline" href="index.html">Home</a>
+            <a class="cursor-pointer hover:underline" href="collection.html">Collections</a>
+            <a class="cursor-pointer hover:underline" href="contact.html">Contact</a>
+          </div>
+         </section>
+
+    <!--checkbox-->
+    <div class=" mt-2  p-5 gap-20 flex ">
+      <div class="border-r-2 p-3 lg:block flex  sm: hidden">
+        <div class="text-2xl">
+            <h1 class="text-2xl font-bold">OCCASSION</h1>
+            <div class="mt-3">
+              <div><input class="check" type="checkbox" name="OCCASSION" value="beach" /> Beach</div>
+              <div><input class="check" type="checkbox" name="OCCASSION"  value="summer" /> Summer</div>
+              <div><input class="check" type="checkbox" name="OCCASSION" value="party" /> Party</div>
+            </div>
+          </div>
+    
+        
+          <div class="text-2xl mt-5">
+            <h1  class="text-2xl font-bold">Type</h1>
+            <div class="mt-3" >
+                <div><input class="check" type="checkbox" name="Color"  value="red"> Half Hand</div>
+                <div><input class="check" type="checkbox" name="Color" value="blue" > Full Hand</div>
+                <div><input class="check" type="checkbox" name="Color" value="white" > Formal</div>
+                <div><input class="check" type="checkbox" name="Color"  value="green"> printed</div>
+            </div>
+          </div>
+    
+    
+          <div class="text-2xl mt-5">
+            <h1 class="text-2xl font-bold">Price</h1>
+            <div>
+                <div><input  class="check" type="checkbox" name="Arrivals" value="new">  500</div>
+                <div><input  class="check" type="checkbox" name="Arrivals" value="old">  1000</div>
+            </div>
+          </div>
+         
+
+      </div>
+
+
+       <!--search-inputbox-->
+      <div class="w-full">
+        <div class="w-full " >
+            <input id="search" class="w-full bg-white border-gray-300 text-black px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            type="text" placeholder="search for your collections">
+        </div>
+
+       <!--shirts-->
+        <div  class=" result mt-2 p-2 gap-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  items-center  ">
+          
+          <div class="text-center">
+            <img title="OCCASSION" src="./image/c1.jpg" alt="">
+            <p class="OCCASSION" >Beach </p>
+            <h1>Half Hand </h1>
+            <p class="price"> 500</p>
+          </div>
+
+          <div class="text-center">
+            <img src="./image/c2.jpg" alt="">
+            <p class="OCCASSION">Beach </p>
+            <h1>Half Hand </h1>
+            <p class="price"> 500</p>
+          </div>
+
+          <div class="text-center">
+            <img src="./image/c3.jpg" alt="">
+            <p class="OCCASSION">Beach </p>
+            <h1>Full Hand </h1>
+            <p class="price">  500</p>
+          </div>
+
+          
+          <div class="text-center">
+            <img src="./image/c1.jpg" alt="">
+            <p class="OCCASSION">Beach </p>
+            <h1>Full hand </h1>
+            <p class="price"> 500</p>
+          </div>
+
+          
+          <div class="text-center">
+            <img src="./image/c4.jpg" alt="">
+            <p class="OCCASSION">Summer </p>
+            <h1>Formal </h1>
+            <p class="price"> 500</p>
+          </div>
+
+          
+          <div class="text-center">
+            <img src="./image/c5.jpg" alt="">
+            <p class="OCCASSION">Summer </p>
+            <h1>Formal </h1>
+            <p class="price">500</p>
+            
+          </div>
+
+          
+          <div class="text-center">
+            <img src="./image/c6.jpg" alt="">
+            <p class="OCCASSION">Summer </p>
+            <h1>Formal </h1>
+             <p class="price">1000</p>
+          </div>
+          
+          <div class="text-center">
+            <img src="./image/new3.jpg" alt="">
+            <p class="OCCASSION">Summer </p>
+            <h1>Formal </h1>
+            <p class="price">1000</p>
+          </div>
+          
+          <div class="text-center">
+            <img src="./image/new4.jpg" alt="">
+            <p class="OCCASSION">Party </p>
+            <h1>Printed </h1>
+            <p class="price"> 1000</p>
+          </div>
+
+          <div class="text-center">
+            <img src="./image/sc1.jpg" alt="">
+            <p class="OCCASSION">Party </p>
+            <h1>Prented</h1>
+            <p class="price"> 1000</p>
+          </div>
+
+          <div class="text-center">
+            <img src="./image/sc6.jpg" alt="">
+            <p class="OCCASSION">Party </p>
+            <h1>Printed</h1>
+            <p class="price"> 1000</p>
+          </div>
+
+          <div class="text-center">
+            <img src="./image/A6.jpg" alt="">
+            <p class="OCCASSION">Party </p>
+            <h1>printed</h1>
+            <p class="price">1000</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--letter-section-->
+<div>
+  <div class="text-center"> 
+    <h1 class="text-3xl font-bold" >JOIN OUR NEWS LETTER</h1>
+    <h1 class="text-1xl font-bold" >Signup for our email newspaper to get exclusive discounts, updates, and more.</h1>
+     <input class="mt-2 w-[80%]" type="text"> <BR></BR>
+     <button class="bg-black text-3xl text-white rounded-lg p-2">Subscribe</button>  
+
+    </div>
+</div>
+
+<!--footer-section-->
+<div class="p-2 font-bold mt-2 text-white bg-black">
+  <div class="p-2 m-2">
+  <h1 class="text-2xl">Nostra</h1>
+  <h1 class="text-1xl mt-2">The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those</h1>
+  <div class="footer flex mt-2">
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+   
+  </div>
+   <h1 class="mt-2 ">@ 2025 NOSTRA.COM</h1>
+   <i>The Page Designed Jayavinoth </i>
+  </div>
+
+</div>
+
+<!--script-link-->
+<script src="collection.js"></script>
+  </body>
+</html>
