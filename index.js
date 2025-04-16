@@ -14,7 +14,7 @@ const btns = document.querySelectorAll('.btn')
 const imageList =["1","2","3","4","5"]
 
 let index = 0 
-container.style.background = `url("/image/${imageList[index]}.jpeg") center/cover no-repeat`;
+container.style.background = `url("./image/${imageList[index]}.jpeg") center/cover no-repeat`;
 btns.forEach((button)=>{
     button.addEventListener('click',()=>{
         if(button.classList.contains('btn-left')){
