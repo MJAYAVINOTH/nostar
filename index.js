@@ -11,7 +11,8 @@
 /*image-slider*/
 const container = document.querySelector('.container')
 const btns = document.querySelectorAll('.btn')
-const imageList =["1","2","3","4","5"]
+
+const imageList =[1,2,3,4,5]
 
 let index = 0 
 container.style.background = `url("./image/${imageList[index]}.jpeg") center/cover no-repeat`;
