@@ -1,105 +1,100 @@
-var search = document.getElementById("search")
+// // search function 
+// var search = document.getElementById("search");
+// var cards = document.querySelectorAll(".text-center.result");
 
-var collection = document.querySelector(".result")
+// search.addEventListener("keyup", function(event) {
+//     var enteredValue = event.target.value.toLowerCase();
 
-var h1List = collection.querySelectorAll("h1")
-var occationList = collection.querySelectorAll(".OCCASSION")
-var priceList = collection.querySelectorAll(".price")
+//     for (var count = 0; count < cards.length; count++) {
+//         var title = cards[count].querySelector("h1").textContent.toLowerCase();
 
-
-search.addEventListener("keyup",function(){
-    var enteredValue = event.target.value
-    console.log(enteredValue)
-for(count=0;count<h1List.length;count=count+1){
-    if(h1List[count].textContent.indexOf(enteredValue)<0){
-        h1List[count].parentElement.style.display="none"
-    }
-    else{
-        h1List[count].parentElement.style.display="block"
-    }
-}
-})
+//         if (title.indexOf(enteredValue) < 0) {
+//             cards[count].style.display = "none"; // hide full card
+//         } else {
+//             cards[count].style.display = "block"; // show full card
+//         }
+//     }
+// });
 
 
-//checkbox value 
-var check = document.getElementsByClassName("check")
-let occassion=[]
-let color=[]
-let arrival=[]
+
+// //checkbox value 
 
 
-for(count=0;count<check.length;count=count+1){
-    check[count].addEventListener("click",function(){
-        if(event.target.checked){
-            console.log("checked"+event.target.name)
-            if(event.target.name==="OCCASSION"){
-                occassion.push(event.target.value)
-                console.log(occassion,color,arrival);
-                updateProduct()
-            }else if(event.target.name==="Color"){
-                color.push(event.target.value)
-                console.log(occassion,color,arrival);
-                updateProduct()
 
-            }else if(event.target.name==="Arrivals"){
-                arrival.push(event.target.value)
-                console.log(occassion,color,arrival);
-    
-            }
-           
-        }else{
-            if(event.target.name==="OCCASSION"){
-                occassion.splice(occassion.indexOf(event.target.value),1)
-                console.log(occassion,color,arrival);
-                updateProduct()
-            }else if(event.target.name==="Color"){
-            
-                color.splice(color.indexOf(event.target.value),1)
-                console.log(occassion,color,arrival);
-                updateProduct()
 
-            }else if(event.target.name==="Arrivals"){
-                arrival.splice(arrival.indexOf(event.target.value),1)
-                console.log(occassion,color,arrival);
-            }
 
-            console.log("unchecked"+event.target.value)
+
+
+
+// //side navbar,menu icon 
+// var sidenav = document.getElementById("sidenav") 
+// var menuicon = document.getElementById("menuicon")
+// var closenav = document.getElementById("closenav")
+
+
+// menuicon.addEventListener("click",function(){
+//   sidenav.style.right=0
+// })
+
+// closenav.addEventListener("click",function(){
+//   sidenav.style.right="-50%"
+// })
+
+
+
+
+// search function + checkbox filter combined
+var search = document.getElementById("search");
+var cards = document.querySelectorAll(".text-center.result");
+var checkboxes = document.querySelectorAll(".check");
+
+// function to filter results
+function filterCards() {
+    var searchValue = search.value.toLowerCase();
+
+    // collect all checked values
+    var checkedValues = Array.from(checkboxes)
+        .filter(ch => ch.checked)
+        .map(ch => ch.value.toLowerCase());
+
+    cards.forEach(card => {
+        var title = card.querySelector("h1").textContent.toLowerCase();
+        var occasion = card.querySelector(".OCCASSION").textContent.toLowerCase();
+        var price = card.querySelector(".price").textContent.toLowerCase();
+
+        var matchesSearch = title.includes(searchValue) || occasion.includes(searchValue) || price.includes(searchValue);
+
+        var matchesCheckbox = checkedValues.length === 0 || checkedValues.some(val =>
+            title.includes(val) || occasion.includes(val) || price.includes(val)
+        );
+
+        if (matchesSearch && matchesCheckbox) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
         }
-    })
-    
-    
-    
-    
+    });
 }
 
-const updateProduct=()=>{
+// search event
+search.addEventListener("keyup", filterCards);
 
-// console.log(occationList,priceList);
-for(count=0;count<occationList.length;count++){
-    console.log(occationList[count].textContent.toLocaleLowerCase().indexOf(occassion));
-    
-    if(occationList[count].textContent.toLocaleLowerCase().indexOf(occassion)<0){
-        occationList[count].parentElement.style.display="none"
-    }
-    else{
-        occationList[count].parentElement.style.display="block"
-    }
-}
-
-}
+// checkbox event
+checkboxes.forEach(ch => {
+    ch.addEventListener("change", filterCards);
+});
 
 
+// side navbar
+var sidenav = document.getElementById("sidenav");
+var menuicon = document.getElementById("menuicon");
+var closenav = document.getElementById("closenav");
 
-//side navbar,menu icon 
-var sidenav = document.getElementById("sidenav") 
-var menuicon = document.getElementById("menuicon")
-var closenav = document.getElementById("closenav")
+menuicon.addEventListener("click", function () {
+  sidenav.style.right = 0;
+});
 
-
-menuicon.addEventListener("click",function(){
-  sidenav.style.right=0
-})
-
-closenav.addEventListener("click",function(){
-  sidenav.style.right="-50%"
-})
+closenav.addEventListener("click", function () {
+  sidenav.style.right = "-50%";
+});

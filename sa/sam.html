@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Example</title>
+</head>
+<body>
+
+<input type="text" id="search" placeholder="Search here...">
+
+<div class="result">
+  <h1>Apple</h1>
+  <h1>Mango</h1>
+  <h1>Orange</h1>
+  <h1>Banana</h1>
+  <h1>Grapes</h1>
+</div>
+
+<script>
+var search = document.getElementById("search");
+var h1List = document.querySelectorAll(".result h1");
+
+search.addEventListener("keyup", function(event) {
+    var enteredValue = event.target.value.toLowerCase(); // lowercase for case-insensitive search
+
+    for (var count = 0; count < h1List.length; count++) {
+        var text = h1List[count].textContent.toLowerCase();
+        
+        if (text.indexOf(enteredValue) < 0) {
+            h1List[count].style.display = "none"; // hide
+        } else {
+            h1List[count].style.display = "block"; // show
+        }
+    }
+});
+</script>
+
+</body>
+</html>

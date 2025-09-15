@@ -50,6 +50,7 @@
   width: 100%;
   display: flex;
   overflow-x: scroll;
+  cursor: pointer;
 }
 .gallery div {
   width: 100%;
